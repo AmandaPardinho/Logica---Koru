@@ -33,3 +33,37 @@ for produto in produtos:
 
 print(f"Total de produtos em estoque: {totalEstoque}")
 print(f"Preço total dos produtos em estoque: {totalPreco}")
+
+# Comprar produtos
+compras = []
+continuarComprando = True
+
+while(continuarComprando == True):
+    print("Qual produto você quer comprar? Sendo: ")
+    num = 0
+    for produto in produtos:
+        print(f"{num}: {produto['nome']}")
+        num = num + 1
+
+    codigo = int(input("Digite a opção desejada: "))
+
+    print(f"Produto escolhido: {produtos[codigo]['nome']}, preço: {produtos[codigo]['preco']}")
+
+    quantidadeDesejada = int(input(f"Quantos {produtos[codigo]['nome']} você quer comprar?"))
+
+    compra = {
+        "codigo": codigo,
+        "quantidadeDesejada": quantidadeDesejada
+    }
+    compras.append(compra)
+
+    # Dar baixa no estoque
+    produtos[codigo]["quantidade"] = produtos[codigo]["quantidade"] - quantidadeDesejada
+    continuarComprando = False
+
+print(produtos)
+
+# Total da compra
+codigo = compras[0]['codigo']
+total = compras[0]['quantidadeDesejada'] * produtos[codigo]['preco']
+print(total)
