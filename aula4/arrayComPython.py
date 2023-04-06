@@ -31,3 +31,26 @@ frutas.append("romã")
 frutas.remove("banana")
 print(len(frutas))
 print(frutas)
+
+#Exibir cada uma das frutas da seguinte forma: Xa. fruta: {nome da Xa. fruta}
+frutas.insert(1, "morango")
+numerador = 1
+for fruta in frutas:
+    print(f"{numerador}a. fruta: {fruta}")
+    numerador = numerador + 1
+print(" ")
+
+#Adicionando mais frutas
+numerador = 1
+frutas.insert(3, "abacaxi")
+frutas.insert(4, "abacate")
+for fruta in frutas:
+    print(f"{numerador}a. fruta: {fruta}")
+    numerador = numerador + 1
+print(" ")
+
+#Mostrar uma lista em ordem alfabética das frutas
+frutasOrdenadas = frutas.copy()
+frutasOrdenadas.sort()
+print(frutasOrdenadas)
+print(frutas)
