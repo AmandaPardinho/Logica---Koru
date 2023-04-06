@@ -7,6 +7,11 @@ print("Nome do produto: " + nome)
 print(f"Quantidade disponível: {quantidade}")
 print(f"Preço por unidade: {preco}")
 
-# Se o estoque de produto estiver abaixo de 50, exiba a frase "Estoque do {produto} está muito baixo. Providencie mais!"
+# Se o estoque de produto estiver abaixo de 50, exiba a frase "Estoque do {produto} está muito baixo. Temos apenas
+# {quantidade} unidade(s). Providencie mais!"
 if(quantidade < 50):
-    print(f"Estoque do {nome} está muito baixo. Temos apenas {quantidade} unidades. Providencie mais!")
+    print(f"Estoque do {nome} está muito baixo. Temos apenas {quantidade} unidade(s). Providencie mais!")
+
+#Calcule o valor do produto com imposto que é o seu valor bruto mais 10% (imposto)
+precoComImposto = preco * 1.1
+print(f"Preço total (com imposto): {precoComImposto}")
