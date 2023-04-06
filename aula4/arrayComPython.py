@@ -13,3 +13,21 @@ print(frutas[1])
 #Quantas frutas temos no array frutas?
 quantidadeFrutas = len(frutas)
 print(quantidadeFrutas)
+
+#Função append()
+frutas.append("abacate")
+print(len(frutas))
+print(frutas)
+
+#Quero apagar a 4a. fruta (abacate)
+frutas.pop(3)
+print(len(frutas))
+print(frutas)
+
+#Adicionar româ à lista de frutas (adiciona ao final da lista)
+frutas.append("romã")
+
+#Remover banana da lista de frutas
+frutas.remove("banana")
+print(len(frutas))
+print(frutas)
