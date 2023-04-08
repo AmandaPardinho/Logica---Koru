@@ -17,3 +17,14 @@ print(soma2)
 total1 = soma(soma(5, 6), soma(8, 2))
 soma3 = soma(total1, 20)
 print(soma3)
+
+# Criar uma função que calcula o fatorial de um determinado número
+def fatorial(numero):
+    total2 = 1
+    i = numero
+    while(i >= 1):
+        total2 = total2 * i
+        i -= 1
+    return total2
+
+print(fatorial(5))
