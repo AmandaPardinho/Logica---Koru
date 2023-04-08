@@ -10,3 +10,10 @@ def soma(num1, num2):
 
 soma1 = soma(5, 4)
 print(soma1)
+
+soma2 = soma(15, -5)
+print(soma2)
+
+total1 = soma(soma(5, 6), soma(8, 2))
+soma3 = soma(total1, 20)
+print(soma3)
